@@ -1,0 +1,31 @@
+.nav{
+    &-logo{
+        img{
+            max-width: 190px;
+            height: 100%;
+            @include media-breakpoint-down(xl) {
+                max-width: 85px;
+            }
+        }
+    }
+    &-search{
+        width: 288px;
+        padding: 1px;
+    }
+    &-icon-search{
+        width: 24px;
+        height: 24px;
+        @include media-breakpoint-down(xl) {
+            width: 18px;
+            height: 18px;
+        }
+    }
+    &-icon-wallet{
+        width: 27px;
+        height: 24px;
+    }
+    &-icon-bars{
+        width: 21px;
+        height: 18px;
+    }
+}

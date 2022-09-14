@@ -68,13 +68,13 @@ $colors: (
 
 // scss-docs-start theme-color-variables
 $primary:       #00cc99; // $blue !default;
-$secondary:     $gray-600 !default;
+$secondary:     #53C139 !default; //$gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-900 !default;
+$light:         #F0F0F0 !default; //$gray-100 !default;
+$dark:          #808080 !default; //$gray-900 !default;      
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -86,7 +86,8 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "black":      $black,
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -250,11 +251,17 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
+  1: $spacer * .25, //4
+  2: $spacer * .5, //8
   3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  4: $spacer * 1.5, //24
+  5: $spacer * 3, //48
+  6: $spacer * .75, //12
+  7: $spacer * 2.5, //40
+  8: $spacer * 5, //80
+  35: 35px,
+  38: 38px,
+  42: 42px,
 ) !default;
 
 $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
@@ -437,26 +444,29 @@ $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
 
-$line-height-base:            1.5 !default;
-$line-height-sm:              1.25 !default;
-$line-height-lg:              2 !default;
+$line-height-base:            1.5 !default; //24
+$line-height-sm:              1.25 !default; //20
+$line-height-lg:              2 !default; //32
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$h1-font-size:                $font-size-base * 3 !default; //48 //$font-size-base * 2.5
+$h2-font-size:                $font-size-base * 2 !default; //32
+$h3-font-size:                $font-size-base * 1.75 !default; //28
+$h4-font-size:                $font-size-base * 1.5 !default; //24
+$h5-font-size:                $font-size-base * 1.25 !default; //20
+$h6-font-size:                $font-size-base !default; //16
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
 $font-sizes: (
-  1: $h1-font-size,
-  2: $h2-font-size,
-  3: $h3-font-size,
-  4: $h4-font-size,
-  5: $h5-font-size,
-  6: $h6-font-size
+  1: $h1-font-size, //48
+  2: $h2-font-size, //32
+  3: $h3-font-size, //28
+  4: $h4-font-size, //24
+  5: $h5-font-size, //20
+  6: $h6-font-size, //16
+  7: $font-size-base * .875, //14
+  8: $font-size-base * 1.125, //18
+  9: $font-size-base * 5, //80
 ) !default;
 // scss-docs-end font-sizes
 
