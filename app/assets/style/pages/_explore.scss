@@ -1,0 +1,25 @@
+.explore{
+    &-img-name{
+        border-bottom: 1px solid #000;
+        @include media-breakpoint-down(md) {
+            border-bottom: none;
+        }
+    }
+}
+.explore-img-more{
+    position: relative;
+    &:hover{
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            color: #fff;
+            background-color: #000;
+            opacity: 0.6;
+            border: 1px solid #fff;
+        }
+    }
+}
